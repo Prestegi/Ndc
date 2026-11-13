@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f3f5f9;
+    color: #0a194e;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom clean range slider for photo zoom */
+input[type='range'].ndc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: #dce2ee;
+  outline: none;
+}
+
+input[type='range'].ndc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0a226e;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(10, 25, 78, 0.35);
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease;
+}
+
+input[type='range'].ndc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background: #d91e26;
+}
+
+input[type='range'].ndc-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0a226e;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(10, 25, 78, 0.35);
+  cursor: pointer;
+}
